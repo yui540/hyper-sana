@@ -1,0 +1,30 @@
+{
+  "name": "hyper-sana",
+  "description": "🍆NatoriSana themes for your Hyper terminal",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env MODE=production webpack",
+    "build:dev": "cross-env MODE=development webpack",
+    "watch": "cross-env MODE=development webpack --watch"
+  },
+  "keywords": [
+    "hyper",
+    "hyper-sana",
+    "theme",
+    "natori-sana"
+  ],
+  "repository": "git@github.com:yui540/hyper-sana.git",
+  "author": "yui540 <tabletennis540@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "color": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  }
+}

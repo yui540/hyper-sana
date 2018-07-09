@@ -1,0 +1,8 @@
+LICENSE
+src/
+webpack.config.js
+node_modules/
+.babelrc
+.editorconfig
+.gitignore
+yarn.lock
