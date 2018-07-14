@@ -1,5 +1,5 @@
+import {termCSS, css} from './stylesheets'
 import {
-  backgroundColor,
   foregroundColor,
   borderColor,
   selectionColor,
@@ -7,9 +7,20 @@ import {
   cursorColor,
 } from './colors'
 
+// plugin options
+const defaultOptions = {
+  illust: true,
+  opacity: 0.6,
+}
+
 exports.decorateConfig = (config) => {
+  const options = Object.assign({},
+    defaultOptions,
+    config.hyperSana
+  )
+
   return Object.assign({}, config, {
-    backgroundColor,
+    backgroundColor: 'transparent',
     foregroundColor,
     borderColor,
     selectionColor,
@@ -17,9 +28,11 @@ exports.decorateConfig = (config) => {
     cursorColor,
     termCSS: `
       ${config.termCSS || ''}
+      ${termCSS(options)}
     `,
     css: `
       ${config.css || ''}
+      ${css(options)}
     `,
   })
 }
