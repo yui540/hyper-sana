@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "lint": "eslint src/**/*.js",
-    "format": "prettier-eslint --write src/**.*.js",
+    "lint": "eslint .",
+    "format": "prettier-eslint --write '**/*.js'",
     "build": "cross-env MODE=production webpack",
     "build:dev": "cross-env MODE=development webpack",
     "watch": "cross-env MODE=development webpack --watch"
