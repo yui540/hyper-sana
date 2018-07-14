@@ -1,7 +1,12 @@
 {
+  "root": true,
   "extends": ["google"],
+  "env": {
+    "browser": true
+  },
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2017,
+    "sourceType": "module"
   },
   "rules": {
     "semi": 0,
