@@ -6,5 +6,5 @@ export default (store, next, action) => {
     audio.src = `${__dirname}/voice/error-${num}.mp3`
     audio.play()
   }
-  next()
+  next(action)
 }
