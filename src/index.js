@@ -1,4 +1,5 @@
 import {termCSS, css} from './stylesheets'
+import middleware from './middleware'
 import {
   foregroundColor,
   borderColor,
@@ -35,4 +36,8 @@ exports.decorateConfig = (config) => {
       ${css(options)}
     `,
   })
+}
+
+exports.middleware = (store) => (next) => (action) => {
+  middleware(store, next, action)
 }
