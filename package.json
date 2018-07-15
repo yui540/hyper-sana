@@ -1,7 +1,7 @@
 {
   "name": "hyper-sana",
   "description": "🍆NatoriSana themes for your Hyper terminal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
