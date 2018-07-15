@@ -2,6 +2,10 @@ const MODE = process.env.MODE
 
 module.exports = {
   mode: MODE,
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
   entry: "./src/index.js",
   output: {
     path: `${ __dirname }`,
