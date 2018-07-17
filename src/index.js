@@ -13,13 +13,14 @@ import {
 const defaultOptions = {
   illust: true,
   opacity: 0.6,
+  overText: false,
 }
 
 exports.decorateConfig = (config) => {
   const options = Object.assign({}, defaultOptions, config.hyperSana)
 
   return Object.assign({}, config, {
-    backgroundColor,
+    backgroundColor: options.overText ? backgroundColor : 'transparent',
     foregroundColor,
     borderColor,
     selectionColor,

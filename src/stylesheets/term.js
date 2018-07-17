@@ -1,6 +1,6 @@
 import illust from '../images/sana.svg'
 
-export default ({illust: show, opacity}) => {
+export default ({illust: show, opacity, overText}) => {
   return `
     .terms_terms:before {
       content: "";
@@ -15,7 +15,7 @@ export default ({illust: show, opacity}) => {
       background-position: right bottom;
       background-repeat: no-repeat;
       opacity: ${opacity};
-      z-index: 1;
+      z-index: ${overText ? '1' : '0'};
     }
   `
 }
