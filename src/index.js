@@ -1,6 +1,7 @@
 import {termCSS, css} from './stylesheets'
 import middleware from './middleware'
 import {
+  backgroundColor,
   foregroundColor,
   borderColor,
   selectionColor,
@@ -12,16 +13,14 @@ import {
 const defaultOptions = {
   illust: true,
   opacity: 0.6,
+  overText: false,
 }
 
 exports.decorateConfig = (config) => {
-  const options = Object.assign({},
-    defaultOptions,
-    config.hyperSana
-  )
+  const options = Object.assign({}, defaultOptions, config.hyperSana)
 
   return Object.assign({}, config, {
-    backgroundColor: 'transparent',
+    backgroundColor: options.overText ? backgroundColor : 'transparent',
     foregroundColor,
     borderColor,
     selectionColor,

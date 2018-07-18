@@ -31,6 +31,7 @@ config: {
   hyperSana: {
     illust: true, // イラストを表示するか（デフォルトは true）
     opacity: 0.3, // イラストの不透明度0~1（デフォルトは0.3）
+    overText: false // イラストの上にテキストを表示するか（デフォルトは false）
   },
   // ...
 }
