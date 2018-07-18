@@ -15,7 +15,7 @@ export default ({illust: show, opacity, overText}) => {
       background-position: right bottom;
       background-repeat: no-repeat;
       opacity: ${opacity};
-      z-index: ${overText ? '1' : '0'};
+      z-index: ${overText ? '1' : 'auto'};
     }
   `
 }
